@@ -1,4 +1,12 @@
 {
+  "license": "Apache-2.0",
+  "name": "smart-cm",
+  "author": {
+    "name": "Nicolas Farabegoli",
+    "email": "nicolas.farabegoli@gmail.com",
+    "url": "https://github.com/nicolasfara"
+  },
+  "description": "Smart Coffee machine with wot framework",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "build-ts": "tsc",
