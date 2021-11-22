@@ -9,7 +9,7 @@
   "description": "Smart Coffee machine with wot framework",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "build-ts": "tsc",
+    "build": "tsc",
     "start": "tsc && node --harmony-top-level-await dist/Main.js"
   },
   "dependencies": {
