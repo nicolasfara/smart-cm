@@ -14,7 +14,6 @@ thingServer.addServer(
     logger.info("Starting thing")
     const wot = await thingServer.start()
     const thing = await wot.produce(td)
-
-    await thing.writeProperty("count", 0)
+    await thing.writeProperty("products", ["coffee", "milk"])
     await thing.expose()
 })()
