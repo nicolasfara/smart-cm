@@ -1,6 +1,7 @@
 import { Servient } from "@node-wot/core"
 import { HttpServer } from "@node-wot/binding-http"
-import { td } from "./constants"
+import { logger } from "./utils/logger"
+import { td } from "./utils/constants"
 
 const thingServer = new Servient()
 thingServer.addServer(
@@ -10,6 +11,7 @@ thingServer.addServer(
 );
 
 (async () => {
+    logger.info("Starting thing")
     const wot = await thingServer.start()
     const thing = await wot.produce(td)
 

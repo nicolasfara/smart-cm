@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@node-wot/binding-http": "^0.7.8",
-    "@node-wot/core": "^0.7.8"
+    "@node-wot/core": "^0.7.8",
+    "winston": "^3.3.3"
   }
 }
