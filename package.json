@@ -1,6 +1,6 @@
 {
   "name": "smart-cm",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "main": "index.js",
   "repository": "git@github.com:nicolasfara/smart-cm.git",
   "author": "Nicolas Farabegoli <nicolas.farabegoli@gmail.com>",
@@ -9,16 +9,41 @@
     "start:dev": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "yarn run build && node dist/index.js",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "release" : "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
   },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@types/node": "16.11.9",
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",
     "eslint": "8.3.0",
     "eslint-plugin-no-loops": "0.3.0",
+    "husky": "^7.0.4",
     "nodemon": "2.0.15",
     "rimraf": "3.0.2",
+    "standard-version": "^9.3.2",
     "ts-node": "10.4.0",
     "typescript": "4.5.2"
   },

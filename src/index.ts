@@ -15,5 +15,8 @@ thingServer.addServer(
     const wot = await thingServer.start()
     const thing = await wot.produce(td)
     await thing.writeProperty("products", ["coffee", "milk"])
+    thing.setActionHandler("deliver", async (params, ) => {
+        logger.info("params: " + JSON.stringify(params))
+    })
     await thing.expose()
 })()

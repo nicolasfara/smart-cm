@@ -3,27 +3,76 @@ export const td = {
     id: "urn:dev:1234-smart-cm",
     title: "MyCounter",
     properties: {
-        products: {
+        availableProducts: {
             title: "List of all available products.",
             type: "array",
             readOnly: true,
             items: {
-                type: "string"
+                type: "object",
+                properties: {
+                    name: {
+                        title: "The name of the product",
+                        type: "string"
+                    },
+                    id: {
+                        title: "The UUID4 that identifies the product",
+                        type: "string"
+                    },
+                    level: {
+                        title: "The level of the product in the machine",
+                        type: "integer",
+                        minimum: 0,
+                        maximum: 100,
+                        unit: "percent"
+                    }
+                }
             }
         },
-        productsAvailability: {
-            title: "The selected product to deliver",
-            type: "string"
-        },
-        sugarAvailability: {
-            title: "The available sugar in the machine express in percentage (%)",
+        availableResourceLevel: {
+            title: "The current level of a given product",
+            description: "The current level of a given product. Requires resource id variable as uriVariables.\nThis property can be overridden to update his value",
             type: "integer",
             minimum: 0,
-            maximum: 100
+            maximum: 100,
+            unit: "percent",
+            uriVariables: {
+                id: {
+                    type: "string"
+                }
+            }
         },
-        state: {
-            title: "The state of the machine",
-            enum: ["ready", "busy", "maintenance", "out-of-order"]
+        deliveryCounter: {
+            title: "The number of drinks made since now",
+            type: "integer",
+            minimum: 0,
+            readOnly: true
+        },
+        maintenanceNeeded: {
+            title: "Shows whether a maintenance is needed. The property is observable.",
+            type: "boolean",
+            observable: true
         }
     },
+    actions: {
+        deliver: {
+            idempotent: false,
+            input: {
+                type: "object",
+                properties: {
+                    product: {
+                        type: "string"
+                    },
+                    sugarQuantity: {
+                        type: "integer",
+                        minimum: 0,
+                        maximum: 3,
+                        unit: "sugar unit"
+                    },
+                    level: {
+                        enum: ["short", "medium", "large"]
+                    }
+                }
+            }
+        }
+    }
 }
