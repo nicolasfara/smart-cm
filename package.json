@@ -17,6 +17,12 @@
       "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
     }
   },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"],
+    "rules": {
+      "subject-case": [2, "never", ["start-case", "pascal-case"]]
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
