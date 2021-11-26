@@ -3,6 +3,8 @@
 About WoT web thing design
 
 ## Smart Coffee Machine
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnicolasfara%2Fsmart-cm.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnicolasfara%2Fsmart-cm?ref=badge_shield)
+
 
 We want to develop an interoperable smart coffee machine (smart-cm) for the Campus, as a WoT Thing. The machine has no
 physical UI, it can be used only via app (smartphone or whatever device). It provides an API for users and for
@@ -30,3 +32,6 @@ REMARKS
   Nevertheless, think about how your approach could be extended in order to integrate existing API based payment
   services (e.g. [stripe](https://stripe.com), [stripe API](https://stripe.com/docs/api))
 - For any other aspects not defined in the text, you can make reasonable assumptions.
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnicolasfara%2Fsmart-cm.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnicolasfara%2Fsmart-cm?ref=badge_large)
