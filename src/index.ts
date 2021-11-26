@@ -14,7 +14,6 @@ thingServer.addServer(
     logger.info("Starting thing")
     const wot = await thingServer.start()
     const thing = await wot.produce(smartCmTd)
-    thing.setPropertyReadHandler("", async e => { })
     thing.setActionHandler("deliver", async (params, ) => {
         logger.info("params: " + JSON.stringify(params))
     })
