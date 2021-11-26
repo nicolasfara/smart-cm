@@ -1,7 +1,7 @@
 export const smartCmTd = {
     "@context": "https://www.w3.org/2019/wot/td/v1",
     id: "urn:dev:1234-smart-cm",
-    title: "MyCounter",
+    title: "Smart Coffee Machine",
     properties: {
         availableProducts: {
             title: "List of all available products.",
@@ -50,6 +50,7 @@ export const smartCmTd = {
         maintenanceNeeded: {
             title: "Shows whether a maintenance is needed. The property is observable.",
             type: "boolean",
+            readOnly: true,
             observable: true
         }
     },
@@ -62,11 +63,10 @@ export const smartCmTd = {
                     product: {
                         type: "string"
                     },
-                    sugarQuantity: {
+                    sugar: {
                         type: "integer",
                         minimum: 0,
                         maximum: 3,
-                        unit: "sugar unit"
                     },
                     level: {
                         enum: ["short", "medium", "large"]

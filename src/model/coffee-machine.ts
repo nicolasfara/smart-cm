@@ -1,3 +1,4 @@
+import {Level, levelToInteger} from "./level"
 import {v4} from "uuid"
 
 /**
@@ -7,7 +8,7 @@ export interface CoffeeMachine {
     /**
      * .
      */
-    makeBeverage(): Promise<boolean>
+    makeBeverage(product: string, level: Level, sugar: number): Promise<boolean>
 
     /**
      * .
@@ -24,6 +25,12 @@ export interface CoffeeMachine {
      * .
      */
     allProducts(): Promise<Array<Product>>
+
+    /**
+     * Check if the given product is finished.
+     * @param product the product name to check.
+     */
+    isFinished(product: string): Promise<boolean>
 }
 
 /**
@@ -53,11 +60,21 @@ export class CoffeeMachineImpl implements CoffeeMachine {
     constructor(startupProducts: Array<Product>) {
         this.machineId = v4()
         this.products.push(...startupProducts)
+        this.initProducts()
     }
 
+    private initProducts() {
+        this.products.push(new Product(v4(), "Coffee", 100, "Nespresso"))
+        this.products.push(new Product(v4(), "Milk", 100, "Lola"))
+    }
 
-    async makeBeverage(): Promise<boolean> {
-        return Promise.resolve(false)
+    async makeBeverage(product: string, level: Level, sugar: number): Promise<boolean> {
+        const prod = this.products.find(e => e.name === product)
+        if (prod === undefined) throw Error(`Unable to find the product '${product}'`)
+        const prodIndex = this.products.findIndex(e => e.name === product)
+        this.products[prodIndex].quantity -= levelToInteger(level)
+        // TODO(Decrease the sugar)
+        return true
     }
 
     async addNewProduct(product: Product): Promise<boolean> {
@@ -70,10 +87,18 @@ export class CoffeeMachineImpl implements CoffeeMachine {
     }
 
     async allProducts(): Promise<Array<Product>> {
-        return Promise.resolve(this.products)
+        return this.products
     }
 
     async availableProducts(): Promise<Array<Product>> {
-        return Promise.resolve(this.products.filter(e => e.quantity != 0))
+        return this.products.filter(e => e.quantity != 0)
+    }
+
+    async isFinished(product: string): Promise<boolean> {
+        const prod = this.products.find(e => e.name === product)
+        if (prod === undefined) {
+            throw Error(`Unable to find ${product} in all available products`)
+        }
+        return prod.quantity === 0
     }
 }

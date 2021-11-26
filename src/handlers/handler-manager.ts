@@ -1,17 +1,12 @@
 import {ExposedThing, ThingDescription} from "wot-typescript-definitions"
 import Ajv from "ajv"
 import {CoffeeMachine} from "../model/coffee-machine"
+import {Level} from "../model/level"
 import {logger} from "../utils/logger"
-
-enum Level {
-    SMALL = "small",
-    MEDIUM = "medium",
-    LARGE = "large"
-}
 
 interface ActionPayload {
     product: string
-    sugarQuantity: number
+    sugar: number
     level: Level
 }
 
@@ -43,6 +38,10 @@ export class HandlerManager {
         }
         const payload: ActionPayload = params as ActionPayload
         logger.debug("Request action 'deliver': " + JSON.stringify(payload))
+        if (await this.coffeeMachine.isFinished(payload.product)) {
+            throw Error(`The product '${payload.product} is finished. No delivery can be made`)
+        }
+        await this.coffeeMachine.makeBeverage(payload.product, payload.level, payload.sugar)
         // Do business logic for deliver the beverage
     }
 
