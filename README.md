@@ -4,7 +4,7 @@ About WoT web thing design
 
 ## Smart Coffee Machine
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnicolasfara%2Fsmart-cm.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnicolasfara%2Fsmart-cm?ref=badge_shield)
-
+[![Node CI](https://github.com/nicolasfara/smart-cm/actions/workflows/ci.yml/badge.svg)](https://github.com/nicolasfara/smart-cm/actions/workflows/ci.yml)
 
 We want to develop an interoperable smart coffee machine (smart-cm) for the Campus, as a WoT Thing. The machine has no
 physical UI, it can be used only via app (smartphone or whatever device). It provides an API for users and for
