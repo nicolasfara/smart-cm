@@ -1,4 +1,4 @@
-export const td = {
+export const smartCmTd = {
     "@context": "https://www.w3.org/2019/wot/td/v1",
     id: "urn:dev:1234-smart-cm",
     title: "MyCounter",
