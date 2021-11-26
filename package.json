@@ -18,9 +18,18 @@
     }
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "rules": {
-      "subject-case": [2, "never", ["start-case", "pascal-case"]]
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
     }
   },
   "devDependencies": {
@@ -41,6 +50,7 @@
   "dependencies": {
     "@node-wot/binding-http": "^0.7.8",
     "@node-wot/core": "^0.7.8",
+    "@types/uuid": "^8.3.3",
     "winston": "^3.3.3"
   }
 }

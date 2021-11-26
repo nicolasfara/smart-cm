@@ -74,5 +74,13 @@ export const td = {
                 }
             }
         }
+    },
+    events: {
+        outOfResource: {
+            title: "Out of resource event. This event is emitted when the available resource of a product is not sufficient",
+            data: {
+                type: "String"
+            }
+        }
     }
 }
