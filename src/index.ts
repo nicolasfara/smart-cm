@@ -20,9 +20,17 @@ thingServer.addServer(
 
     const handlerManager = new HandlerManager(thing, coffeeMachine)
 
+    // Init thing properties
     await thing.writeProperty("availableProducts", await coffeeMachine.availableProducts())
-    thing.setPropertyReadHandler("availableProducts", async () => coffeeMachine.availableProducts())
+
+    // Setup properties handlers
+    thing.setPropertyReadHandler("availableProducts", async () => handlerManager.availableProductsReadHandler())
+    thing.setPropertyReadHandler("availableResourceLevel", async p => handlerManager.availableResourceLevelReadHandler(p))
+
+    // Setup action handler
     thing.setActionHandler("deliver", params => handlerManager.deliverActionsHandler(params))
-    thing.observeProperty("maintenanceNeeded", e => handlerManager.maintenanceHandler(e))
+    // thing.observeProperty("maintenanceNeeded", e => handlerManager.maintenanceHandler(e))
+
+    // Run the thing
     await thing.expose()
 })()

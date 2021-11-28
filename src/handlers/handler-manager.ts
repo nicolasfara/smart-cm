@@ -2,6 +2,7 @@ import {ExposedThing, ThingDescription} from "wot-typescript-definitions"
 import Ajv from "ajv"
 import {CoffeeMachine} from "../model/coffee-machine"
 import {Level} from "../model/level"
+import addFormats from "ajv-formats"
 import {logger} from "../utils/logger"
 
 interface ActionPayload {
@@ -14,7 +15,7 @@ interface ActionPayload {
  * Handle all the handlers for the wot.
  */
 export class HandlerManager {
-    private validator: Ajv
+    private readonly validator: Ajv
     private thing: ExposedThing
     private coffeeMachine: CoffeeMachine
     private readonly td: ThingDescription
@@ -24,9 +25,30 @@ export class HandlerManager {
         this.coffeeMachine = coffeeMachine
         this.td = thing.getThingDescription()
         this.validator = new Ajv()
+        addFormats(this.validator)
     }
 
     // Properties handlers
+    async availableProductsReadHandler() {
+        const products = await this.coffeeMachine.availableProducts()
+        if (!this.validator.validate(this.td.properties.availableProducts.items, this.coffeeMachine.allProducts())) {
+            throw Error(JSON.stringify(this.validator.errors))
+        }
+        return products
+    }
+
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    async availableResourceLevelReadHandler(params: any) {
+        const productId: { productId: string } = params.uriVariables
+        if (!this.validator.validate(this.td.properties.availableResourceLevel.uriVariables, productId)) {
+            throw Error(JSON.stringify(this.validator.errors))
+        }
+        const prodLevel = (await this.coffeeMachine.allProducts()).find(e => e.id == productId.productId)
+        if (prodLevel === undefined) {
+            throw Error(`Unable to find the id: ${productId.productId}`)
+        }
+        return prodLevel.quantity
+    }
 
     // Actions handlers
 
