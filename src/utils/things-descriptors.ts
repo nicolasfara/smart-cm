@@ -13,6 +13,7 @@ export const smartCmTd = {
             "title": "List of all available products.",
             "type": "array",
             "readOnly": true,
+            "writeOnly": false,
             "forms": [{
                 "op": "readproperty",
                 "href": "https://localhost:8081/properties/availableProducts",
@@ -20,25 +21,35 @@ export const smartCmTd = {
             }],
             "items": {
                 "type": "object",
+                "readOnly": true,
+                "writeOnly": false,
                 "properties": {
                     "name": {
                         "title": "The name of the product",
-                        "type": "string"
+                        "type": "string",
+                        "readOnly": true,
+                        "writeOnly": false
                     },
                     "id": {
                         "title": "The UUID4 that identifies the product",
                         "type": "string",
-                        "format": "uuid"
+                        "format": "uuid",
+                        "readOnly": true,
+                        "writeOnly": false
                     },
                     "level": {
                         "title": "The level of the product in the machine",
                         "description": "The level field represent the number of unit of product: a unit correspond to the short unit level\nFor example: if medium is chose, the level is decreased by 2 unit",
                         "type": "integer",
-                        "minimum": 0
+                        "minimum": 0,
+                        "readOnly": true,
+                        "writeOnly": false
                     },
                     "supplier": {
                         "title": "The supplier of the product",
-                        "type": "string"
+                        "type": "string",
+                        "readOnly": true,
+                        "writeOnly": false
                     }
                 }
             }
@@ -49,6 +60,7 @@ export const smartCmTd = {
             "type": "integer",
             "minimum": 0,
             "readOnly": true,
+            "writeOnly": false,
             "forms": [{
                 "op": "readproperty",
                 "href": "https://localhost:8081/properties/availableResourceLevel",
@@ -58,7 +70,9 @@ export const smartCmTd = {
                 "productId": {
                     "title": "The UUID of the product",
                     "type": "string",
-                    "format": "uuid"
+                    "format": "uuid",
+                    "readOnly": false,
+                    "writeOnly": false
                 }
             }
         },
@@ -66,7 +80,8 @@ export const smartCmTd = {
             "title": "The number of drinks made since now",
             "type": "integer",
             "minimum": 0,
-            "readOnly": true,
+            "readOnly": false,
+            "writeOnly": false,
             "forms": [{
                 "op": "readproperty",
                 "href": "https://localhost:8081/properties/deliveryCount",
@@ -76,7 +91,8 @@ export const smartCmTd = {
         "maintenanceNeeded": {
             "title": "Shows whether a maintenance is needed. The property is observable.",
             "type": "boolean",
-            "readOnly": true,
+            "readOnly": false,
+            "writeOnly": false,
             "observable": true,
             "forms": [{
                 "op": ["readproperty", "observeproperty"],
@@ -88,6 +104,7 @@ export const smartCmTd = {
     "actions": {
         "deliver": {
             "idempotent": false,
+            "safe": false,
             "forms": [{
                 "op": ["invokeaction"],
                 "href": "https://localhost:8081/actions/deliver",
@@ -95,17 +112,25 @@ export const smartCmTd = {
             }],
             "input": {
                 "type": "object",
+                "readOnly": true,
+                "writeOnly": false,
                 "properties": {
                     "product": {
-                        "type": "string"
+                        "type": "string",
+                        "readOnly": true,
+                        "writeOnly": false
                     },
                     "sugar": {
                         "type": "integer",
                         "minimum": 0,
-                        "maximum": 3
+                        "maximum": 3,
+                        "readOnly": true,
+                        "writeOnly": false
                     },
                     "level": {
-                        "enum": ["short", "medium", "large"]
+                        "enum": ["short", "medium", "large"],
+                        "readOnly": true,
+                        "writeOnly": false
                     }
                 }
             }
@@ -115,7 +140,9 @@ export const smartCmTd = {
         "outOfResource": {
             "title": "Out of resource event. This event is emitted when the available resource of a product is not sufficient",
             "data": {
-                "type": "string"
+                "type": "string",
+                "readOnly": true,
+                "writeOnly": false
             },
             "forms": [{
                 "op": ["subscribeevent"],
