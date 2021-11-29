@@ -56,6 +56,7 @@ class Product {
 export class CoffeeMachineImpl implements CoffeeMachine {
     private machineId: string
     private products: Array<Product> = []
+    private deliveryCount = 0
 
     constructor(startupProducts: Array<Product>) {
         this.machineId = v4()
@@ -74,6 +75,7 @@ export class CoffeeMachineImpl implements CoffeeMachine {
         const prodIndex = this.products.findIndex(e => e.name === product)
         this.products[prodIndex].quantity -= levelToInteger(level)
         // TODO(Decrease the sugar)
+        this.deliveryCount += 1
         return true
     }
 

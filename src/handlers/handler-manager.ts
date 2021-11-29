@@ -39,15 +39,22 @@ export class HandlerManager {
 
     /* eslint-disable @typescript-eslint/no-explicit-any */
     async availableResourceLevelReadHandler(params: any) {
-        const productId: { productId: string } = params.uriVariables
-        if (!this.validator.validate(this.td.properties.availableResourceLevel.uriVariables, productId)) {
+        if (params === undefined) {
+            throw Error(`Malformed uriVariables parameters`)
+        }
+        if (!this.validator.validate(this.td.properties.availableResourceLevel.uriVariables.productId, params.uriVariables.productId)) {
             throw Error(JSON.stringify(this.validator.errors))
         }
+        const productId: { productId: string } = params.uriVariables
         const prodLevel = (await this.coffeeMachine.allProducts()).find(e => e.id == productId.productId)
         if (prodLevel === undefined) {
             throw Error(`Unable to find the id: ${productId.productId}`)
         }
         return prodLevel.quantity
+    }
+
+    async deliveryCounterReadHandler() {
+        return
     }
 
     // Actions handlers
