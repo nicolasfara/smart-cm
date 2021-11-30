@@ -1,5 +1,7 @@
 import {Level, levelToInteger} from "./level"
+import {Product} from "./product"
 import {v4} from "uuid"
+import {logger} from "../utils/logger"
 
 /**
  * .
@@ -14,7 +16,7 @@ export interface CoffeeMachine {
      * .
      * @param product.
      */
-    addNewProduct(product: Product): Promise<boolean>
+    addNewProduct(product: Product): Promise<void>
 
     /**
      * .
@@ -31,23 +33,17 @@ export interface CoffeeMachine {
      * @param product the product name to check.
      */
     isFinished(product: string): Promise<boolean>
-}
 
-/**
- * A single element used to produce the final product: e.g. Coffee, Tea, Sugar, Water, etc.
- */
-class Product {
-    id: string
-    name: string
-    quantity: number
-    supplier: string
+    /**
+     * Return the number of product made since now.
+     */
+    deliveryCount(): Promise<number>
 
-    constructor(id: string, name: string, quantity: number, supplier: string) {
-        this.id = id
-        this.name = name
-        this.quantity = quantity
-        this.supplier = supplier
-    }
+    /**
+     * Handler is called when the machine is out of order.
+     * @param handler the handler to call
+     */
+    onMaintenanceHandler(handler: (message: any) => void): void
 }
 
 /**
@@ -56,36 +52,46 @@ class Product {
 export class CoffeeMachineImpl implements CoffeeMachine {
     private machineId: string
     private products: Array<Product> = []
-    private deliveryCount = 0
+    private sugar: Product
+    private deliveryCounter = 0
+    private outOfOrderHandler: ((message: any) => void) | undefined
 
-    constructor(startupProducts: Array<Product>) {
+    constructor(startupProducts: Array<Product>, sugar: Product) {
         this.machineId = v4()
         this.products.push(...startupProducts)
+        this.sugar = sugar
         this.initProducts()
     }
 
     private initProducts() {
-        this.products.push(new Product(v4(), "Coffee", 100, "Nespresso"))
-        this.products.push(new Product(v4(), "Milk", 100, "Lola"))
+        this.products.push(new Product(v4(), "Coffee", 20, "Nespresso"))
+        this.products.push(new Product(v4(), "Milk", 20, "Lola"))
     }
 
     async makeBeverage(product: string, level: Level, sugar: number): Promise<boolean> {
         const prod = this.products.find(e => e.name === product)
         if (prod === undefined) throw Error(`Unable to find the product '${product}'`)
+        if (prod.quantity < levelToInteger(level)) throw Error(`Not sufficient level of '${product}'!`)
         const prodIndex = this.products.findIndex(e => e.name === product)
         this.products[prodIndex].quantity -= levelToInteger(level)
-        // TODO(Decrease the sugar)
-        this.deliveryCount += 1
+        this.sugar.quantity =- sugar
+        this.deliveryCounter += 1
+
+        // Check if the machine is out of order
+        if (await this.isFinished(product) && this.outOfOrderHandler !== undefined) {
+            logger.warn(`The product ${product} is finished`)
+            this.outOfOrderHandler(`The product ${product} is finished!`)
+        }
         return true
     }
 
-    async addNewProduct(product: Product): Promise<boolean> {
-        if (this.products.includes(product)) {
-            return Promise.resolve(false)
-        } else {
-            this.products.push(product)
-            return Promise.resolve(true)
+    async addNewProduct(product: Product): Promise<void> {
+        const findProduct = this.products.find(e => e.name == product.name && e.supplier === product.supplier)
+        if (findProduct !== undefined) { // I've already the product, increase only the quantity
+            findProduct.quantity += product.quantity
+            return
         }
+        this.products.push(product)
     }
 
     async allProducts(): Promise<Array<Product>> {
@@ -102,5 +108,13 @@ export class CoffeeMachineImpl implements CoffeeMachine {
             throw Error(`Unable to find ${product} in all available products`)
         }
         return prod.quantity === 0
+    }
+
+    async deliveryCount(): Promise<number> {
+        return this.deliveryCounter
+    }
+
+    async onMaintenanceHandler(handler: (message: any) => void): Promise<void> {
+        this.outOfOrderHandler = handler
     }
 }

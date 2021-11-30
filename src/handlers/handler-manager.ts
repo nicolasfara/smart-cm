@@ -2,13 +2,21 @@ import {ExposedThing, ThingDescription} from "wot-typescript-definitions"
 import Ajv from "ajv"
 import {CoffeeMachine} from "../model/coffee-machine"
 import {Level} from "../model/level"
+import {Product} from "../model/product"
 import addFormats from "ajv-formats"
 import {logger} from "../utils/logger"
+import {v4} from "uuid"
 
-interface ActionPayload {
+interface DeliverActionPayload {
     product: string
     sugar: number
     level: Level
+}
+
+interface AddProductAction {
+    product: string
+    quantity: number
+    supplier: string
 }
 
 /**
@@ -26,6 +34,12 @@ export class HandlerManager {
         this.td = thing.getThingDescription()
         this.validator = new Ajv()
         addFormats(this.validator)
+        this.coffeeMachine.onMaintenanceHandler(msg => this.outOfOrderHandler(msg))
+    }
+
+    private async outOfOrderHandler(msg: any) {
+        await this.thing.writeProperty("maintenanceNeeded", true)
+        this.thing.emitEvent("outOfResource", msg)
     }
 
     // Properties handlers
@@ -54,7 +68,7 @@ export class HandlerManager {
     }
 
     async deliveryCounterReadHandler() {
-        return
+        return this.coffeeMachine.deliveryCount()
     }
 
     // Actions handlers
@@ -65,13 +79,23 @@ export class HandlerManager {
             logger.error("Invalid input for action: 'deliver': " + JSON.stringify(params))
             throw Error(JSON.stringify(this.validator.errors))
         }
-        const payload: ActionPayload = params as ActionPayload
+        const payload: DeliverActionPayload = params as DeliverActionPayload
         logger.debug("Request action 'deliver': " + JSON.stringify(payload))
         if (await this.coffeeMachine.isFinished(payload.product)) {
             throw Error(`The product '${payload.product} is finished. No delivery can be made`)
         }
-        await this.coffeeMachine.makeBeverage(payload.product, payload.level, payload.sugar)
+        const isSuccess = await this.coffeeMachine.makeBeverage(payload.product, payload.level, payload.sugar)
+        if (!isSuccess) throw Error("Failed to make the beverage")
         // Do business logic for deliver the beverage
+    }
+
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    async addProductHandler(params: any) {
+        if (!this.validator.validate(this.td.actions.addProduct.input, params)) {
+            throw Error(JSON.stringify(this.validator.errors))
+        }
+        const product = params as AddProductAction
+        await this.coffeeMachine.addNewProduct(new Product(v4(), product.product, product.quantity, product.supplier))
     }
 
     // Events handlers
