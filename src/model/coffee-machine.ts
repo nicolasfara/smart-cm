@@ -1,7 +1,7 @@
 import {Level, levelToInteger} from "./level"
 import {Product} from "./product"
-import {v4} from "uuid"
 import {logger} from "../utils/logger"
+import {v4} from "uuid"
 
 /**
  * .
@@ -43,6 +43,7 @@ export interface CoffeeMachine {
      * Handler is called when the machine is out of order.
      * @param handler the handler to call
      */
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     onMaintenanceHandler(handler: (message: any) => void): void
 }
 

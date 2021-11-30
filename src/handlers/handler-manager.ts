@@ -2,6 +2,7 @@ import {ExposedThing, ThingDescription} from "wot-typescript-definitions"
 import Ajv from "ajv"
 import {CoffeeMachine} from "../model/coffee-machine"
 import {Level} from "../model/level"
+import {PaymentManager} from "./stripe"
 import {Product} from "../model/product"
 import addFormats from "ajv-formats"
 import {logger} from "../utils/logger"
@@ -11,6 +12,11 @@ interface DeliverActionPayload {
     product: string
     sugar: number
     level: Level
+    payment: {
+        name: string
+        email: string,
+        source: string
+    }
 }
 
 interface AddProductAction {
@@ -27,6 +33,7 @@ export class HandlerManager {
     private thing: ExposedThing
     private coffeeMachine: CoffeeMachine
     private readonly td: ThingDescription
+    private paymentManager = new PaymentManager()
 
     constructor(thing: ExposedThing, coffeeMachine: CoffeeMachine) {
         this.thing = thing
@@ -37,6 +44,7 @@ export class HandlerManager {
         this.coffeeMachine.onMaintenanceHandler(msg => this.outOfOrderHandler(msg))
     }
 
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     private async outOfOrderHandler(msg: any) {
         await this.thing.writeProperty("maintenanceNeeded", true)
         this.thing.emitEvent("outOfResource", msg)
@@ -81,12 +89,15 @@ export class HandlerManager {
         }
         const payload: DeliverActionPayload = params as DeliverActionPayload
         logger.debug("Request action 'deliver': " + JSON.stringify(payload))
+
         if (await this.coffeeMachine.isFinished(payload.product)) {
             throw Error(`The product '${payload.product} is finished. No delivery can be made`)
         }
+
+        // Check if the payment succeed
+        //if (await this.paymentManager.paymentIntent(payload.payment, 100, "Coffee payment")) { ... }
         const isSuccess = await this.coffeeMachine.makeBeverage(payload.product, payload.level, payload.sugar)
         if (!isSuccess) throw Error("Failed to make the beverage")
-        // Do business logic for deliver the beverage
     }
 
     /* eslint-disable @typescript-eslint/no-explicit-any */
