@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+smart-cm/dist
 
 # Gatsby files
 .cache/
