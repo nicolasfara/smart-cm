@@ -45,6 +45,7 @@ jobs:
 
       - name: yarn install, build, and test
         run: |
+          cd smart-cm
           yarn install --frozen-lockfile
           yarn run lint
           yarn run build
