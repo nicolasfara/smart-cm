@@ -25,11 +25,11 @@ jobs:
       - name: Setup yarn
         run: npm install -g yarn
 
-      - name: Setup Nodejs with yarn caching
-        uses: actions/setup-node@v2
-        with:
-          node-version: "17"
-          cache: yarn
+#      - name: Setup Nodejs with yarn caching
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: "17"
+#          cache: yarn
 
       - name: Get npm cache directory
         id: yarn-cache
@@ -43,11 +43,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: yarn install, build, and test
-        run: |
-          cd smart-cm
-          yarn install --frozen-lockfile
-          yarn run lint
-          yarn run build
-        env:
-          CI: true
+#      - name: yarn install, build, and test
+#        run: |
+#          cd smart-cm
+#          yarn install --frozen-lockfile
+#          yarn run lint
+#          yarn run build
+#        env:
+#          CI: true
