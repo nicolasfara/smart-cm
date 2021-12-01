@@ -1,4 +1,4 @@
-import Stripe from "stripe"
+import Stripe from "src/handlers/stripe"
 
 interface PaymentRequest {
     name: string

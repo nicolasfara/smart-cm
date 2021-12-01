@@ -7,9 +7,9 @@
   "license": "Apache-2.0",
   "scripts": {
     "start:dev": "nodemon",
-    "build": "rimraf ./dist && tsc",
+    "build": "rimraf dist && tsc",
     "start": "yarn run build && node dist/index.js",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint .. --ext .ts",
     "release": "standard-version"
   },
   "husky": {
