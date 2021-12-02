@@ -53,7 +53,7 @@ export class App extends React.Component<any, State> {
                         />
                         <Space>
                             <div>&euro; 0.80</div>
-                            <Button type="primary" key={item.id} onClick={App.callback}>Acquista</Button>
+                            <Button type="primary" id={item.id} onClick={this.callback}>Ordina</Button>
                         </Space>
                     </List.Item>
                 )}
@@ -61,7 +61,7 @@ export class App extends React.Component<any, State> {
         )
   }
 
-  private static callback(event: any) {
-    console.log(event)
+  private callback(event: any) {
+    console.log(event.target.offsetParent.id)
   }
 }
