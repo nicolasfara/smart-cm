@@ -14,10 +14,10 @@
   dependencies:
     "@ctrl/tinycolor" "^3.4.0"
 
-"@ant-design/cssinjs@^0.0.0-alpha.44":
-  version "0.0.0-alpha.60"
-  resolved "https://registry.yarnpkg.com/@ant-design/cssinjs/-/cssinjs-0.0.0-alpha.60.tgz#17998ea8da0ca734747876045e455e0c28f19a97"
-  integrity sha512-EQlU5f20flZMQ9XDbR/RL5MhQedgkHXR6o4pfbe6cMv0YMXK/jv669++N8msC7ZoNnGf2OxbmGRkvVS0OqG3iw==
+"@ant-design/cssinjs@^1.0.0":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@ant-design/cssinjs/-/cssinjs-1.0.2.tgz#9eab8a44358209c988c706bbad200fb5763b7815"
+  integrity sha512-UzmLG9G9w9rxGrIdn8BYoOjnFCK/PJTzz1zWEFL29ix294GauOGM+wWiKHf5TZliw2+bFxTZbrMkhdmcphYe6Q==
   dependencies:
     "@babel/runtime" "^7.11.1"
     "@emotion/hash" "^0.8.0"
@@ -2987,13 +2987,13 @@ ansi-styles@^5.0.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-5.2.0.tgz#07449690ad45777d1924ac2abb2fc8895dba836b"
   integrity sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==
 
-antd@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-5.0.0.tgz#bc8cb87931fa832dd664c4bec8b7047310a7d9ab"
-  integrity sha512-3IGHXl3KokGrkYIk2P2fQytDloTmdw9vgMHJzFsusBrAEnRXoN8oSWrN/N6D7f5hWqRusSaAIlPTsYSIcPHFrQ==
+antd@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-5.0.1.tgz#c4fd63034131947d1d55f37f7695c19fe201c3dd"
+  integrity sha512-t+YqAWW2smxdQsxTTtNHt9nErESnCS/pcuze4EgPNOi5M++fv7wXBhmk1ZJgxNTDKKxoy134H9vL1ZFq3cWpgQ==
   dependencies:
     "@ant-design/colors" "^6.0.0"
-    "@ant-design/cssinjs" "^0.0.0-alpha.44"
+    "@ant-design/cssinjs" "^1.0.0"
     "@ant-design/icons" "^4.7.0"
     "@ant-design/react-slick" "~0.29.1"
     "@babel/runtime" "^7.18.3"
@@ -3018,7 +3018,7 @@ antd@5.0.0:
     rc-motion "^2.6.1"
     rc-notification "~5.0.0-alpha.9"
     rc-pagination "~3.2.0"
-    rc-picker "~3.0.0-4"
+    rc-picker "~3.1.1"
     rc-progress "~3.4.1"
     rc-rate "~2.9.0"
     rc-resize-observer "^1.2.0"
@@ -4077,16 +4077,6 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
-
-date-fns@2.x:
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.27.0.tgz#e1ff3c3ddbbab8a2eaadbb6106be2929a5a2d92b"
-  integrity sha512-sj+J0Mo2p2X1e306MHq282WS4/A8Pz/95GIFcsPNMPMZVI3EUrAdSv90al1k+p74WGLCruMXk23bfEDZa71X9Q==
-
-dayjs@1.x:
-  version "1.10.7"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
-  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
 
 dayjs@^1.11.1:
   version "1.11.6"
@@ -6801,11 +6791,6 @@ mkdirp@^0.5.5, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-moment@^2.24.0:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -8170,16 +8155,13 @@ rc-pagination@~3.2.0:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.1"
 
-rc-picker@~3.0.0-4:
-  version "3.0.0-4"
-  resolved "https://registry.yarnpkg.com/rc-picker/-/rc-picker-3.0.0-4.tgz#08a77f05be3cd51971ad9352df030fe96e264de1"
-  integrity sha512-2otFBRBCACE/cubgLgkhtuo+M6AAuYssgjQmRmD+g/R+RDPQVV0MZTRDYhy6YOmlK8yj+gUc73YfUEYhfecBZw==
+rc-picker@~3.1.1:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/rc-picker/-/rc-picker-3.1.2.tgz#fac85964007bdc906d33a8400f53798744ab440f"
+  integrity sha512-PHf4E91JANMBVjovqhRcZw0fDZYWlDW9APhMD8VxBSs2QeKbnf+vE5BdA3YmHq227woSptbkm9rfhR4dgSn4+g==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.1"
-    date-fns "2.x"
-    dayjs "1.x"
-    moment "^2.24.0"
     rc-trigger "^5.0.4"
     rc-util "^5.4.0"
     shallowequal "^1.1.0"
