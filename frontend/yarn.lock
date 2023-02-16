@@ -3018,10 +3018,10 @@ ansi-styles@^5.0.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-5.2.0.tgz#07449690ad45777d1924ac2abb2fc8895dba836b"
   integrity sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==
 
-antd@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-5.2.0.tgz#847da3ce9c71544a8bfc4fe10beb1f0c97a69737"
-  integrity sha512-FZDgV60I2sZ0ZpxcP1vq+lwNM+OwMESjT1A2Zs9mgyK1P3X4JILugD+m05IZoUqkjWO80IKNUo9qkE1S1rEB6A==
+antd@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-5.2.1.tgz#96ee27776bf920fc89a508d3db4da6554b396973"
+  integrity sha512-yuTeYEhfvsEjHdPwhb47GXBk9EHZ/pHDaUgJMXHhOUbaWPWnTliHtQwgHYMJT9rEZobi3O0YRP2wnYWVtbDGsw==
   dependencies:
     "@ant-design/colors" "^7.0.0"
     "@ant-design/cssinjs" "^1.5.6"
@@ -3060,7 +3060,7 @@ antd@5.2.0:
     rc-steps "~6.0.0"
     rc-switch "~4.0.0"
     rc-table "~7.30.2"
-    rc-tabs "~12.5.1"
+    rc-tabs "~12.5.6"
     rc-textarea "~1.0.0"
     rc-tooltip "~5.3.1"
     rc-tree "~5.7.0"
@@ -8326,10 +8326,10 @@ rc-table@~7.30.2:
     rc-resize-observer "^1.1.0"
     rc-util "^5.27.1"
 
-rc-tabs@~12.5.1:
-  version "12.5.3"
-  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-12.5.3.tgz#03b3ede27c0b1e31fb82453b46056a61e89a9536"
-  integrity sha512-74ezAR19bzb1S5Zw+3DaSr2hPZmMnjFbEpNlVAA7cHK5nyrvN21O+QaFtx9hlODQRIYnF/rPb4FeOTmpJLLL3Q==
+rc-tabs@~12.5.6:
+  version "12.5.6"
+  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-12.5.6.tgz#611728575d5f3ef010a8e5e75d2c1b67bb71e86a"
+  integrity sha512-aArXHzxK7YICxe+622CZ8FlO5coMi8P7E6tXpseCPKm1gdTjUt0LrQK1/AxcrRXZXG3K4QqhlKmET0+cX5DQaQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     classnames "2.x"
