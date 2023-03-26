@@ -42,7 +42,7 @@
     "eslint-plugin-no-loops": "0.3.0",
     "husky": "8.0.3",
     "nodemon": "2.0.22",
-    "rimraf": "4.4.0",
+    "rimraf": "4.4.1",
     "standard-version": "9.5.0",
     "ts-node": "10.9.1",
     "typescript": "5.0.2"
