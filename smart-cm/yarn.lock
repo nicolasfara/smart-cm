@@ -292,12 +292,12 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@node-wot/binding-http@^0.8.0":
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.6.tgz#f89b371f1e16af0e82b6ef27d64a2cb178352a9d"
-  integrity sha512-FhV4LE6RqeuXUfTUIN8PDqiPXobDhW5Oroxk0k69Et8fpZ+7KFElcgnFK3xty90PQMnYzlHlHZWsas3+s4lXHQ==
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.7.tgz#186f04945c3feaae5d4ee23dca5df66083cc330c"
+  integrity sha512-PUrrDKIpVs+S6y8rsXsrIqhrUGv+TXFIQMqw1eL5T8yDdzboWSh1JALulUSGTCpKl03NdFxR1PEErxZMB5lZ5g==
   dependencies:
-    "@node-wot/core" "0.8.6"
-    "@node-wot/td-tools" "0.8.6"
+    "@node-wot/core" "0.8.7"
+    "@node-wot/td-tools" "0.8.7"
     "@types/eventsource" "1.1.10"
     accept-language-parser "1.5.0"
     basic-auth "2.0.1"
@@ -307,9 +307,22 @@
     query-string "^7.1.1"
     rxjs "5.5.11"
     slugify "^1.4.5"
-    wot-thing-description-types "1.1.0-23-March-2023"
 
-"@node-wot/core@0.8.6", "@node-wot/core@^0.8.0":
+"@node-wot/core@0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.7.tgz#80b20f085dfcd2f0e9628454a976625c43b73a2b"
+  integrity sha512-pY+79lx1SgJs6oc/9vvHkBAcVOYSbZYHvJ0YPMEh1TAVHvtHlBi1rJVuyRf10tePSSySHh+i22jeLnosDzDN8g==
+  dependencies:
+    "@node-wot/td-tools" "0.8.7"
+    "@petamoriken/float16" "^3.1.1"
+    ajv "^8.11.0"
+    cbor "^8.1.0"
+    debug "^4.3.4"
+    uritemplate "0.3.4"
+    uuid "^7.0.3"
+    web-streams-polyfill "^3.0.1"
+
+"@node-wot/core@^0.8.0":
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.6.tgz#ef14c9b65494b52e978c87bd9211e504c387db26"
   integrity sha512-0t2QHKCUUZ+eI3RLWZAJA2224/Yggh88NjVO1zaTW4E270e4usmBFI1QwETif+M9oIbbx2Dmof67pVgbStD6SQ==
@@ -337,6 +350,19 @@
     wot-thing-model-types "1.1.0-23-March-2023"
     wot-typescript-definitions "0.8.0-SNAPSHOT.25"
 
+"@node-wot/td-tools@0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.7.tgz#655d32d391e8a13cf9a699e097e9ead5e750b047"
+  integrity sha512-tiQd4dN3Bii40DegPDAqZO7mQpg+fVbqbE0RX0OZFVnO4Pu4C8OWUi1PjzJ/3Dk1PlzkN5hfBKBa9jz7EafNJw==
+  dependencies:
+    ajv "^8.11.0"
+    debug "^4.3.4"
+    is-absolute-url "3.0.3"
+    json-placeholder-replacer "^1.0.35"
+    url-toolkit "2.1.6"
+    wot-thing-model-types "1.1.0-24-May-2023"
+    wot-typescript-definitions "0.8.0-SNAPSHOT.26"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -359,9 +385,9 @@
     fastq "^1.6.0"
 
 "@petamoriken/float16@^3.1.1":
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.8.0.tgz#3a48b7938e1a62188a61ec02d5b12630f671401f"
-  integrity sha512-AhVAm6SQ+zgxIiOzwVdUcDmKlu/qU39FiYD2UD6kQQaVenrn0dGZewIghWAENGQsvC+1avLCuT+T2/3Gsp/W3w==
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.8.1.tgz#ebb6994fb7b0698fc73e11a183a2b5e3ae722fb4"
+  integrity sha512-oj3dU9kuMy8AqrreIboVh3KCJGSQO5T+dJ8JQFl369961jTWvPLP1GIlLy0FVoWehXLoI9BXygu/yzuNiIHBlg==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -2223,9 +2249,9 @@ neo-async@^2.6.0:
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 node-fetch@^2.6.7:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.9.tgz#7c7f744b5cc6eb5fd404e0c7a9fec630a55657e6"
-  integrity sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.11.tgz#cde7fc71deef3131ef80a738919f999e6edfff25"
+  integrity sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -3299,10 +3325,20 @@ wot-thing-description-types@1.1.0-23-March-2023:
   resolved "https://registry.yarnpkg.com/wot-thing-description-types/-/wot-thing-description-types-1.1.0-23-March-2023.tgz#3d0d8659dd43a0a84d34eab4f1a744718394f3b3"
   integrity sha512-uS0ngJGTKsWLU0NpECGpfmzpae0nTwFwawwpEY5PVA71bUjTdvw3YCMTK1WG+7/1CYxKwXw72JtlsFJ6DApp9w==
 
+wot-thing-description-types@1.1.0-24-May-2023:
+  version "1.1.0-24-May-2023"
+  resolved "https://registry.yarnpkg.com/wot-thing-description-types/-/wot-thing-description-types-1.1.0-24-May-2023.tgz#69aa263ba40d7a86651aa55f55dd646fa5f44dae"
+  integrity sha512-iUwWIPskTQc/19Ax0JxpdufpKKBsvY2h3DTgHA05+mdHPknvDAMhLbbFM5pd+u6hQonQqA2T6MF/zJ8r1Zy1qQ==
+
 wot-thing-model-types@1.1.0-23-March-2023:
   version "1.1.0-23-March-2023"
   resolved "https://registry.yarnpkg.com/wot-thing-model-types/-/wot-thing-model-types-1.1.0-23-March-2023.tgz#d449be125b5ede02813b85e7475e9cf091c08e9a"
   integrity sha512-Ty8NrbE8kImKkvwktc5oh0K4L1iDg1vxnR6NmUaAEMKZPfLmCbYdOL+IOcd82gLPiyT8+aaS/E6owH92UjVcIA==
+
+wot-thing-model-types@1.1.0-24-May-2023:
+  version "1.1.0-24-May-2023"
+  resolved "https://registry.yarnpkg.com/wot-thing-model-types/-/wot-thing-model-types-1.1.0-24-May-2023.tgz#c8bbba4613d815a20928585021920b3ceed973dd"
+  integrity sha512-VDrvlSjPZ1MsG4buq4uw2KIAye/XuCDapXZHZNqDMuGmi3pIXrRZOJPcOpvXcQWbqA9AKj8Dwfm7Yp87CP/k9w==
 
 wot-typescript-definitions@0.8.0-SNAPSHOT.25:
   version "0.8.0-SNAPSHOT.25"
@@ -3310,6 +3346,13 @@ wot-typescript-definitions@0.8.0-SNAPSHOT.25:
   integrity sha512-mZadvXCWzf77xHLMTwM9O8bokLhQbyqW07q+x2/kD1AT2wwkPxU9+Gj3psmTaSX8Pvev6orVY3ICuU1g2ukvLA==
   dependencies:
     wot-thing-description-types "1.1.0-23-March-2023"
+
+wot-typescript-definitions@0.8.0-SNAPSHOT.26:
+  version "0.8.0-SNAPSHOT.26"
+  resolved "https://registry.yarnpkg.com/wot-typescript-definitions/-/wot-typescript-definitions-0.8.0-SNAPSHOT.26.tgz#bac7f65f5da8f3253927d6b01d728f94bac3155b"
+  integrity sha512-3CZGIABqc5Gf2GxmeO3bAIH+cuja/vHbx0qm6oiE71kVNAp95tkwlobp1CiAyoqOrGOQaBbQnG80kJgaqdh0BQ==
+  dependencies:
+    wot-thing-description-types "1.1.0-24-May-2023"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"
