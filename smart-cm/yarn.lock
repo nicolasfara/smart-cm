@@ -435,9 +435,9 @@
   integrity sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==
 
 "@types/node@>=8.1.0":
-  version "20.6.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.6.2.tgz#a065925409f59657022e9063275cd0b9bd7e1b12"
-  integrity sha512-Y+/1vGBHV/cYk6OI1Na/LHzwnlNCAfU3ZNGrc1LdRe/LAIbdDPTTv/HU3M7yXN448aTVDq3eKRm2cg7iKLb8gw==
+  version "20.6.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.6.5.tgz#4c6a79adf59a8e8193ac87a0e522605b16587258"
+  integrity sha512-2qGq5LAOTh9izcc0+F+dToFigBWiK1phKPt7rNhOqJSr35y8rlIBjDwGtFSgAI6MGIhjwOVNSQZVdJsZJ2uR1w==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -3043,9 +3043,9 @@ strip-json-comments@^3.1.1:
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
 stripe@^13.0.0:
-  version "13.6.0"
-  resolved "https://registry.yarnpkg.com/stripe/-/stripe-13.6.0.tgz#8d7e77aa86fc05c97dcc4539d9bc87cda6da0147"
-  integrity sha512-0VSzva12onR75i708y2CB+UCeQKfPeLRkOCaGZYzHXiXiubB0C3pLKq+MPNfnajzfOeO6EVBita6rEAFGj0ZGA==
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-13.7.0.tgz#0876e56eb25e019fbed1ff3f017ac7f8fee889ae"
+  integrity sha512-0cbUNl5aDwt5rIZeE/WgyTxZN/PtwyeA5KcVJrHj260tjN4IOo2BZikN+dxhKoeBfI4aSRAd3E5vHRKmjjaSbA==
   dependencies:
     "@types/node" ">=8.1.0"
     qs "^6.11.0"
