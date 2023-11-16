@@ -329,7 +329,7 @@
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.8.10":
+"@node-wot/core@0.8.10", "@node-wot/core@^0.8.0":
   version "0.8.10"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.10.tgz#c9fc6402117d337723167481a4b7f90d1ec4629a"
   integrity sha512-5+XkV94PKqvQiPsA6gHRSJIL7EYGkAWrDX7wbMdEKNorvMNCDfX8Am3dIcOeGPZ5ErhFMpuo0twouWps8OB4RA==
@@ -343,37 +343,10 @@
     uuid "^7.0.3"
     web-streams-polyfill "^3.0.1"
 
-"@node-wot/core@^0.8.0":
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.9.tgz#6c965f1efcfb1bcba829ad993ecabefb224b96a2"
-  integrity sha512-qpsFVlgUnt13arTR9FA0z7EGdsgFoLlsOdYA5R+oJRIdTm+fBC8JT7v/6hgi9g6Slg5hMXrJ94OO6Dhonyp2bg==
-  dependencies:
-    "@node-wot/td-tools" "0.8.9"
-    "@petamoriken/float16" "^3.1.1"
-    ajv "^8.11.0"
-    cbor "^8.1.0"
-    debug "^4.3.4"
-    uritemplate "0.3.4"
-    uuid "^7.0.3"
-    web-streams-polyfill "^3.0.1"
-
 "@node-wot/td-tools@0.8.10":
   version "0.8.10"
   resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.10.tgz#04a83096abe806b4572aa4a9adcdf6b8c1ed1e70"
   integrity sha512-eFckrZERIbIsa8sV/VewQW6ynRChra9ElwWa2QDXx+LmHNyaPpZJX0T+OU4LISkXKLVA1I80pdHRC6prbUiHkA==
-  dependencies:
-    ajv "^8.11.0"
-    debug "^4.3.4"
-    is-absolute-url "3.0.3"
-    json-placeholder-replacer "^1.0.35"
-    url-toolkit "2.1.6"
-    wot-thing-model-types "1.1.0-05-July-2023"
-    wot-typescript-definitions "0.8.0-SNAPSHOT.27"
-
-"@node-wot/td-tools@0.8.9":
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.9.tgz#35f2b0007393087e79368eb4ed6ec89ad59762ac"
-  integrity sha512-t0XcwQmbMeIGsjrg+lWXsIErdGhxmLd61gbBXIqRoujwEB9OSdOsgqIiycgosHIc5dMrZlavOHHdwYHMLg8cSw==
   dependencies:
     ajv "^8.11.0"
     debug "^4.3.4"
