@@ -329,7 +329,7 @@
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.8.11":
+"@node-wot/core@0.8.11", "@node-wot/core@^0.8.0":
   version "0.8.11"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.11.tgz#a6b0151131600d605092c6822c855b3a350fe173"
   integrity sha512-MaJi5h3vvlyaRIp38L1vTyTUQOBPyLrQQN9VZxssG1q2IRf7Mk+iv72RchqrILGryNubK2O+SMb+fKJl2QggQQ==
@@ -342,33 +342,6 @@
     uritemplate "0.3.4"
     uuid "^7.0.3"
     web-streams-polyfill "^3.0.1"
-
-"@node-wot/core@^0.8.0":
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.10.tgz#c9fc6402117d337723167481a4b7f90d1ec4629a"
-  integrity sha512-5+XkV94PKqvQiPsA6gHRSJIL7EYGkAWrDX7wbMdEKNorvMNCDfX8Am3dIcOeGPZ5ErhFMpuo0twouWps8OB4RA==
-  dependencies:
-    "@node-wot/td-tools" "0.8.10"
-    "@petamoriken/float16" "^3.1.1"
-    ajv "^8.11.0"
-    cbor "^8.1.0"
-    debug "^4.3.4"
-    uritemplate "0.3.4"
-    uuid "^7.0.3"
-    web-streams-polyfill "^3.0.1"
-
-"@node-wot/td-tools@0.8.10":
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.10.tgz#04a83096abe806b4572aa4a9adcdf6b8c1ed1e70"
-  integrity sha512-eFckrZERIbIsa8sV/VewQW6ynRChra9ElwWa2QDXx+LmHNyaPpZJX0T+OU4LISkXKLVA1I80pdHRC6prbUiHkA==
-  dependencies:
-    ajv "^8.11.0"
-    debug "^4.3.4"
-    is-absolute-url "3.0.3"
-    json-placeholder-replacer "^1.0.35"
-    url-toolkit "2.1.6"
-    wot-thing-model-types "1.1.0-05-July-2023"
-    wot-typescript-definitions "0.8.0-SNAPSHOT.27"
 
 "@node-wot/td-tools@0.8.11":
   version "0.8.11"
@@ -3442,32 +3415,15 @@ wordwrap@^1.0.0:
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
 
-wot-thing-description-types@1.1.0-05-July-2023:
-  version "1.1.0-05-July-2023"
-  resolved "https://registry.yarnpkg.com/wot-thing-description-types/-/wot-thing-description-types-1.1.0-05-July-2023.tgz#8bbad253e38088715d58d778ddbc7b698e195b9f"
-  integrity sha512-s24umjivmgeJuW93siBf6SRCSh+5OBfXoO5x1tSPxuXtQ2GCishGyA/BHohMODzrwDz8EuEpnF7P/3T3pVI5ew==
-
 wot-thing-description-types@1.1.0-09-November-2023:
   version "1.1.0-09-November-2023"
   resolved "https://registry.yarnpkg.com/wot-thing-description-types/-/wot-thing-description-types-1.1.0-09-November-2023.tgz#9d63e19ef9c40e60380ca74b46312bf2451aecf4"
   integrity sha512-qgZ1Khg/L3SkIRSm4POVoj0P5MU4GIwxWdyQz2ckZzhnXesgPqe+AUzGxK37ArlxvaMytyjo0Cx2yfKoDHtlkA==
 
-wot-thing-model-types@1.1.0-05-July-2023:
-  version "1.1.0-05-July-2023"
-  resolved "https://registry.yarnpkg.com/wot-thing-model-types/-/wot-thing-model-types-1.1.0-05-July-2023.tgz#ff6c5a3995731b6a33f0d23df57fa07a26a42e35"
-  integrity sha512-e52eHHzwRJ3Rz3QFZNvZeSlXOpdYqs/3Jk114mUbtH54nsB9A//1gmT3H7w9+PJ2q+NBHF/pPHc+vr10V76FKg==
-
 wot-thing-model-types@1.1.0-09-November-2023:
   version "1.1.0-09-November-2023"
   resolved "https://registry.yarnpkg.com/wot-thing-model-types/-/wot-thing-model-types-1.1.0-09-November-2023.tgz#c6b485db17984ea118939af2867d6dec9945cba7"
   integrity sha512-BwmZGEG5VCth34RwXbQutFre7dcSanm1OhYve6lTxuGyqeRAQsj33CUrN5PjU5LSs68Xubm0FbKJZPvWGFa6LA==
-
-wot-typescript-definitions@0.8.0-SNAPSHOT.27:
-  version "0.8.0-SNAPSHOT.27"
-  resolved "https://registry.yarnpkg.com/wot-typescript-definitions/-/wot-typescript-definitions-0.8.0-SNAPSHOT.27.tgz#593c57efca750d471c7b9276b449295b87c18f59"
-  integrity sha512-3E6mpZNJu7ya6GAB/65qc7/pmgFnOZ6mSpp+liyEEYjuQiR7oxzr/cUtSbHWK/ynUI3J3T8RkzQn+N73rKvGfQ==
-  dependencies:
-    wot-thing-description-types "1.1.0-05-July-2023"
 
 wot-typescript-definitions@0.8.0-SNAPSHOT.29:
   version "0.8.0-SNAPSHOT.29"
