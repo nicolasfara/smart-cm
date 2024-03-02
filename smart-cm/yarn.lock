@@ -38,25 +38,25 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.6.0.tgz#ec6cd237440700bc23ca23087f513c75508958b0"
   integrity sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==
 
-"@commitlint/cli@19.0.1":
-  version "19.0.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-19.0.1.tgz#6177f3e45922a6d8ee1da874c7650f7b59045451"
-  integrity sha512-6D+KT/RasFPF92M549I3lABSBWXAdmKvBfxtYWlWO5JdYFSK+B6jY6XyE/hN/DNSYvwwcuNk+CzbqQcy+EbrCw==
+"@commitlint/cli@19.0.3":
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-19.0.3.tgz#a415069099864b75dc65bb22c703c11a3837f258"
+  integrity sha512-mGhh/aYPib4Vy4h+AGRloMY+CqkmtdeKPV9poMcZeImF5e3knQ5VYaSeAM0mEzps1dbKsHvABwaDpafLUuM96g==
   dependencies:
-    "@commitlint/format" "^19.0.0"
-    "@commitlint/lint" "^19.0.0"
-    "@commitlint/load" "^19.0.1"
-    "@commitlint/read" "^19.0.0"
-    "@commitlint/types" "^19.0.0"
+    "@commitlint/format" "^19.0.3"
+    "@commitlint/lint" "^19.0.3"
+    "@commitlint/load" "^19.0.3"
+    "@commitlint/read" "^19.0.3"
+    "@commitlint/types" "^19.0.3"
     execa "^8.0.1"
     yargs "^17.0.0"
 
-"@commitlint/config-conventional@19.0.0":
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-19.0.0.tgz#3d462be9cd4a3f2676eace218217e487db141e53"
-  integrity sha512-d8lPm+slPUdA8Zof2Y36RqAm/MmAYx/QQIEd2gKbpfLThQK1oYLs+0C3sMPD+4LIq2kh4cnbV9WnPA0P5sN8Ig==
+"@commitlint/config-conventional@19.0.3":
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-19.0.3.tgz#28b8b9e7561366bf663c2955e4fe8e3fd954675d"
+  integrity sha512-vh0L8XeLaEzTe8VCxSd0gAFvfTK0RFolrzw4o431bIuWJfi/yRCHJlsDwus7wW2eJaFFDR0VFXJyjGyDQhi4vA==
   dependencies:
-    "@commitlint/types" "^19.0.0"
+    "@commitlint/types" "^19.0.3"
     conventional-changelog-conventionalcommits "^7.0.2"
 
 "@commitlint/config-validator@^19.0.3":
@@ -84,7 +84,7 @@
   resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-19.0.0.tgz#928fb239ae8deec82a6e3b05ec9cfe20afa83856"
   integrity sha512-mtsdpY1qyWgAO/iOK0L6gSGeR7GFcdW7tIjcNFxcWkfLDF5qVbPHKuGATFqRMsxcO8OUKNj0+3WOHB7EHm4Jdw==
 
-"@commitlint/format@^19.0.0":
+"@commitlint/format@^19.0.3":
   version "19.0.3"
   resolved "https://registry.yarnpkg.com/@commitlint/format/-/format-19.0.3.tgz#6e3dcdc028b39d370ba717b8bde0853705c467dc"
   integrity sha512-QjjyGyoiVWzx1f5xOteKHNLFyhyweVifMgopozSgx1fGNrGV8+wp7k6n1t6StHdJ6maQJ+UUtO2TcEiBFRyR6Q==
@@ -100,7 +100,7 @@
     "@commitlint/types" "^19.0.3"
     semver "^7.6.0"
 
-"@commitlint/lint@^19.0.0":
+"@commitlint/lint@^19.0.3":
   version "19.0.3"
   resolved "https://registry.yarnpkg.com/@commitlint/lint/-/lint-19.0.3.tgz#7db83188310c1a5fbdffebbb32a35aa1b0aacee3"
   integrity sha512-uHPyRqIn57iIplYa5xBr6oNu5aPXKGC4WLeuHfqQHclwIqbJ33g3yA5fIA+/NYnp5ZM2EFiujqHFaVUYj6HlKA==
@@ -110,7 +110,7 @@
     "@commitlint/rules" "^19.0.3"
     "@commitlint/types" "^19.0.3"
 
-"@commitlint/load@^19.0.1":
+"@commitlint/load@^19.0.3":
   version "19.0.3"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-19.0.3.tgz#f05ce3830482e3908799f8e6eb202c8d9713efd8"
   integrity sha512-18Tk/ZcDFRKIoKfEcl7kC+bYkEQ055iyKmGsYDoYWpKf6FUvBrP9bIWapuy/MB+kYiltmP9ITiUx6UXtqC9IRw==
@@ -140,7 +140,7 @@
     conventional-changelog-angular "^7.0.0"
     conventional-commits-parser "^5.0.0"
 
-"@commitlint/read@^19.0.0":
+"@commitlint/read@^19.0.3":
   version "19.0.3"
   resolved "https://registry.yarnpkg.com/@commitlint/read/-/read-19.0.3.tgz#b04abaa4daae2ba84f5f77a3800a6c3bc27cd94d"
   integrity sha512-b5AflTyAXkUx5qKw4TkjjcOccXZHql3JqMi522knTQktq2AubKXFz60Sws+K4FsefwPws6fGz9mqiI/NvsvxFA==
@@ -185,7 +185,7 @@
   dependencies:
     find-up "^7.0.0"
 
-"@commitlint/types@^19.0.0", "@commitlint/types@^19.0.3":
+"@commitlint/types@^19.0.3":
   version "19.0.3"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-19.0.3.tgz#feff4ecac2b5c359f2a57f9ab094b2ac80ef0266"
   integrity sha512-tpyc+7i6bPG9mvaBbtKUeghfyZSDgWquIDfMgqYtTbmZ9Y9VzEm2je9EYcQ0aoz5o7NvGS+rcDec93yO08MHYA==
