@@ -304,12 +304,12 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@node-wot/binding-http@^0.8.0":
-  version "0.8.12"
-  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.12.tgz#9c7de8e9e975fef32fed32a68df3a13476237730"
-  integrity sha512-hlSLm/DtA4QpD0OEv2JLQJku1wPbWXc+ufnLtQa7FrCqYd2LM4tr/1aqiAsgVFx+fTeM8mZ48Lf9CbheMIc5vg==
+  version "0.8.13"
+  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.13.tgz#488c7992e3b47dfbd86ca51c435912f06a755b0e"
+  integrity sha512-GZ+vJIxYZYWPNZ5Vj5xPZCxpHpv1DzxR2AkOcu15gDWZM5dgiDHdPhZW99Q7ojJh6OGdNq71wE8eieAcuE0poA==
   dependencies:
-    "@node-wot/core" "0.8.12"
-    "@node-wot/td-tools" "0.8.12"
+    "@node-wot/core" "0.8.13"
+    "@node-wot/td-tools" "0.8.13"
     "@types/eventsource" "1.1.10"
     accept-language-parser "1.5.0"
     basic-auth "2.0.1"
@@ -321,7 +321,23 @@
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.8.12", "@node-wot/core@^0.8.0":
+"@node-wot/core@0.8.13":
+  version "0.8.13"
+  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.13.tgz#27035f05dbada8cfe5b9c07c72f119d46be0ae30"
+  integrity sha512-BzTN6fWeA4llvT6UJNyj7aNrG2d9UkhjCbdWt2c8t81gZ/w8foJeSAOTly+4Q7HjnKlZNdwLDqOaaVWmitmpuw==
+  dependencies:
+    "@node-wot/td-tools" "0.8.13"
+    "@petamoriken/float16" "^3.1.1"
+    ajv "^8.11.0"
+    ajv-formats "^2.1.1"
+    cbor "^8.1.0"
+    content-type "^1.0.5"
+    debug "^4.3.4"
+    uritemplate "0.3.4"
+    uuid "^7.0.3"
+    web-streams-polyfill "^3.0.1"
+
+"@node-wot/core@^0.8.0":
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.12.tgz#26c12a58e26481f51fd9d380ef92ad84afaad5fa"
   integrity sha512-TF2gswWzem8HCunVz4vS1so6WA6FHGDqlhI+TcgHybgDeo7Uance22KWPKzTwB4UL90MItA+kUuloXpOmuv4Gw==
@@ -339,6 +355,19 @@
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.12.tgz#b912d1db3f172f015eed68947c62c65ee18fe706"
   integrity sha512-uqH4MEWCkB4V4/5y6gzbid3OCBR9/a6+VBMXxLt9F74YpF5K9KOhHM3VOGCpSlaIfK7bif1vS4RbzRIdN9viYA==
+  dependencies:
+    ajv "^8.11.0"
+    debug "^4.3.4"
+    is-absolute-url "3.0.3"
+    json-placeholder-replacer "^1.0.35"
+    url-toolkit "2.1.6"
+    wot-thing-model-types "1.1.0-09-November-2023"
+    wot-typescript-definitions "0.8.0-SNAPSHOT.29"
+
+"@node-wot/td-tools@0.8.13":
+  version "0.8.13"
+  resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.13.tgz#c598cb658ad7d815e89cb85936a3c7a2f820552a"
+  integrity sha512-CK5sfZb/kYkopNrvYFX8wuooG6xwTaKR1+yHernIh9eRw5hzV/k17rLHU18322q8Xbx1Q2nk8vv+JH9KOLe7ww==
   dependencies:
     ajv "^8.11.0"
     debug "^4.3.4"
@@ -370,9 +399,9 @@
     fastq "^1.6.0"
 
 "@petamoriken/float16@^3.1.1":
-  version "3.8.4"
-  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.8.4.tgz#cd3c02a7fe39f10ae3dd24ed33bd082053aadd66"
-  integrity sha512-kB+NJ5Br56ZhElKsf0pM7/PQfrDdDVMRz8f0JM6eVOGE+L89z9hwcst9QvWBBnazzuqGTGtPsJNZoQ1JdNiGSQ==
+  version "3.8.6"
+  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.8.6.tgz#580701cb97a510882342333d31c7cbfd9e14b4f4"
+  integrity sha512-GNJhABTtcmt9al/nqdJPycwFD46ww2+q2zwZzTjY0dFFwUAFRw9zszvEr9osyJRd9krRGy6hUDopWUg9fX7VVw==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -593,6 +622,13 @@ add-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/add-stream/-/add-stream-1.0.0.tgz#6a7990437ca736d5e1288db92bd3266d5f5cb2aa"
   integrity sha1-anmQQ3ynNtXhKI25K9MmbV9csqo=
+
+ajv-formats@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
+  integrity sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==
+  dependencies:
+    ajv "^8.0.0"
 
 ajv-formats@^3.0.0:
   version "3.0.1"
@@ -898,6 +934,11 @@ concat-stream@^2.0.0:
     inherits "^2.0.3"
     readable-stream "^3.0.2"
     typedarray "^0.0.6"
+
+content-type@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.5.tgz#8b773162656d1d1086784c8f23a54ce6d73d7918"
+  integrity sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -3384,9 +3425,9 @@ validate-npm-package-license@^3.0.1:
     spdx-expression-parse "^3.0.0"
 
 web-streams-polyfill@^3.0.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.2.tgz#32e26522e05128203a7de59519be3c648004343b"
-  integrity sha512-3pRGuxRF5gpuZc0W+EpwQRmCD7gRqcDOMt688KmdlDAgAyaB1XlN0zq2njfDNm44XVdIouE7pZ6GzbdyH47uIQ==
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz#2073b91a2fdb1fbfbd401e7de0ac9f8214cecb4b"
+  integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
