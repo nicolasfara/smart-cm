@@ -309,12 +309,12 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@node-wot/binding-http@^0.8.0":
-  version "0.8.13"
-  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.13.tgz#488c7992e3b47dfbd86ca51c435912f06a755b0e"
-  integrity sha512-GZ+vJIxYZYWPNZ5Vj5xPZCxpHpv1DzxR2AkOcu15gDWZM5dgiDHdPhZW99Q7ojJh6OGdNq71wE8eieAcuE0poA==
+  version "0.8.14"
+  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.14.tgz#12f1496e0a92d7b10746e438b7d7a9166ee291d0"
+  integrity sha512-zezjgAxP6KXx+OkU80+6MdmyjLiMW0qzezjUTKfVgNUO/zQU+F61UScEdmc0HbGHaiAJXEukqmP6cHheRpUScg==
   dependencies:
-    "@node-wot/core" "0.8.13"
-    "@node-wot/td-tools" "0.8.13"
+    "@node-wot/core" "0.8.14"
+    "@node-wot/td-tools" "0.8.14"
     "@types/eventsource" "1.1.10"
     accept-language-parser "1.5.0"
     basic-auth "2.0.1"
@@ -326,7 +326,23 @@
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.8.13", "@node-wot/core@^0.8.0":
+"@node-wot/core@0.8.14":
+  version "0.8.14"
+  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.14.tgz#c83fe4c4561ab22323c299bdb3a90aae4f61c9db"
+  integrity sha512-/7JbnWdicUQC+e/00L51pcQIr5rbL+eIWiqL2RPkLKBPhrPjIDwz5vyIcYhM1qkogKgn8ksD7XIloYrm1zf/PQ==
+  dependencies:
+    "@node-wot/td-tools" "0.8.14"
+    "@petamoriken/float16" "^3.1.1"
+    ajv "^8.11.0"
+    ajv-formats "^2.1.1"
+    cbor "^8.1.0"
+    content-type "^1.0.5"
+    debug "^4.3.4"
+    uritemplate "0.3.4"
+    uuid "^7.0.3"
+    web-streams-polyfill "^3.0.1"
+
+"@node-wot/core@^0.8.0":
   version "0.8.13"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.13.tgz#27035f05dbada8cfe5b9c07c72f119d46be0ae30"
   integrity sha512-BzTN6fWeA4llvT6UJNyj7aNrG2d9UkhjCbdWt2c8t81gZ/w8foJeSAOTly+4Q7HjnKlZNdwLDqOaaVWmitmpuw==
@@ -346,6 +362,19 @@
   version "0.8.13"
   resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.13.tgz#c598cb658ad7d815e89cb85936a3c7a2f820552a"
   integrity sha512-CK5sfZb/kYkopNrvYFX8wuooG6xwTaKR1+yHernIh9eRw5hzV/k17rLHU18322q8Xbx1Q2nk8vv+JH9KOLe7ww==
+  dependencies:
+    ajv "^8.11.0"
+    debug "^4.3.4"
+    is-absolute-url "3.0.3"
+    json-placeholder-replacer "^1.0.35"
+    url-toolkit "2.1.6"
+    wot-thing-model-types "1.1.0-09-November-2023"
+    wot-typescript-definitions "0.8.0-SNAPSHOT.29"
+
+"@node-wot/td-tools@0.8.14":
+  version "0.8.14"
+  resolved "https://registry.yarnpkg.com/@node-wot/td-tools/-/td-tools-0.8.14.tgz#53163e2426eae1171a568d4580afddca4e804867"
+  integrity sha512-ILa2L8XMfPoPrNexXcHusFkP1yV7pW5mvupskYvw0IXFLNI/Zw3mzUvc3Es1pCMwOpjOHfet7+dsNzOYA903lg==
   dependencies:
     ajv "^8.11.0"
     debug "^4.3.4"
@@ -377,9 +406,9 @@
     fastq "^1.6.0"
 
 "@petamoriken/float16@^3.1.1":
-  version "3.8.6"
-  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.8.6.tgz#580701cb97a510882342333d31c7cbfd9e14b4f4"
-  integrity sha512-GNJhABTtcmt9al/nqdJPycwFD46ww2+q2zwZzTjY0dFFwUAFRw9zszvEr9osyJRd9krRGy6hUDopWUg9fX7VVw==
+  version "3.8.7"
+  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.8.7.tgz#16073fb1b9867eaa5b254573484d09100700aaa4"
+  integrity sha512-/Ri4xDDpe12NT6Ex/DRgHzLlobiQXEW/hmG08w1wj/YU7hLemk97c+zHQFp0iZQ9r7YqgLEXZR2sls4HxBf9NA==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -1150,7 +1179,7 @@ dateformat@^3.0.0:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-debug@^4, debug@^4.3.1, debug@^4.3.4:
+debug@^4, debug@^4.3.1:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -1161,6 +1190,13 @@ debug@^4.3.2:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
+  dependencies:
+    ms "2.1.2"
+
+debug@^4.3.4:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.5.tgz#e83444eceb9fedd4a1da56d671ae2446a01a6e1e"
+  integrity sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==
   dependencies:
     ms "2.1.2"
 
@@ -3229,9 +3265,9 @@ touch@^3.1.0:
     nopt "~1.0.10"
 
 tough-cookie@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-4.1.3.tgz#97b9adb0728b42280aa3d814b6b999b2ff0318bf"
-  integrity sha512-aX/y5pVRkfRnfmuX+OdbSdXvPe6ieKX/G2s7e98f4poJHnqH3281gDPm/metm6E/WRamfx7WC4HUqkWHfQHprw==
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-4.1.4.tgz#945f1461b45b5a8c76821c33ea49c3ac192c1b36"
+  integrity sha512-Loo5UUvLD9ScZ6jh8beX1T6sO1w2/MpCRpEP7V280GKMVUQ0Jzar2U3UJPsrdbziLEMMhu3Ujnq//rhiFuIeag==
   dependencies:
     psl "^1.1.33"
     punycode "^2.1.1"
