@@ -435,17 +435,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@20.14.12":
+"@types/node@20.14.12", "@types/node@>=8.1.0":
   version "20.14.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.12.tgz#129d7c3a822cb49fc7ff661235f19cfefd422b49"
   integrity sha512-r7wNXakLeSsGT0H1AU863vS2wa5wBOK4bWMjZz2wj+8nBx+m5PeIn0k8AloSLpRuiwdRQZwarZqHE4FNArPuJQ==
-  dependencies:
-    undici-types "~5.26.4"
-
-"@types/node@>=8.1.0":
-  version "20.14.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.10.tgz#a1a218290f1b6428682e3af044785e5874db469a"
-  integrity sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==
   dependencies:
     undici-types "~5.26.4"
 
@@ -3183,9 +3176,9 @@ strip-json-comments@^3.1.1:
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
 stripe@^16.0.0:
-  version "16.2.0"
-  resolved "https://registry.yarnpkg.com/stripe/-/stripe-16.2.0.tgz#30559f11cceff251d386936266842abdad4e4622"
-  integrity sha512-kNHb5x6mlQJ8V92Afn+F+uyHG3U0+Mc1pOYxDkbEh/kI3oF63URnUt6dwTQthELYWBy04arerm2XjwgtzEPDEA==
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-16.5.0.tgz#a0126936c52bac8396a33a54c691a2cd9a4512ce"
+  integrity sha512-5qY2Va8pmnqS/dcKsQKJnk9kkYCtS6hqjN7kktZEmdxVohZHvbT9pOWK8UUKRInTXYkCNl6x505tO5416KLPsQ==
   dependencies:
     "@types/node" ">=8.1.0"
     qs "^6.11.0"
