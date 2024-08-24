@@ -325,7 +325,7 @@
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.8.16":
+"@node-wot/core@0.8.16", "@node-wot/core@^0.8.0":
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.16.tgz#6ec7d88175e22e829c28acd37cd276799701b50e"
   integrity sha512-viHaXIeIryx+sm0H8oBnR5mUSTFj9raWaJYCNa/BGphfOUhcOB5pajS5NOJcQUzSy76Z9XY3JMw3taRAuPTvsw==
@@ -340,22 +340,6 @@
     is-absolute-url "3.0.3"
     uritemplate "0.3.4"
     url-toolkit "2.1.6"
-    uuid "^7.0.3"
-    web-streams-polyfill "^3.0.1"
-
-"@node-wot/core@^0.8.0":
-  version "0.8.15"
-  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.15.tgz#1b351646b91989d41e03faa91dc6384de69c67a1"
-  integrity sha512-adJWG1izVBYYId1vUpxX7hrB3iaVawA04xmFiKnWCRwgJ9I1SdH9s+T2HmYtqL+IHOtnpTuhjMeTJ0dRSa97EQ==
-  dependencies:
-    "@petamoriken/float16" "^3.1.1"
-    "@thingweb/thing-model" "^1.0.3"
-    ajv "^8.11.0"
-    ajv-formats "^2.1.1"
-    cbor "^8.1.0"
-    content-type "^1.0.5"
-    debug "^4.3.4"
-    uritemplate "0.3.4"
     uuid "^7.0.3"
     web-streams-polyfill "^3.0.1"
 
