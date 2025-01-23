@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "5.5.2",
-    "antd": "5.23.1",
+    "antd": "5.23.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "typescript": "5.7.3",
