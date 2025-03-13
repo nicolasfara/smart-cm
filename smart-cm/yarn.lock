@@ -345,24 +345,42 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@node-wot/binding-http@^0.8.0":
-  version "0.8.16"
-  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.8.16.tgz#4d84150ed042a5cb91eb5721e3de953279563530"
-  integrity sha512-PqpjyEcJt1apjWpObtctPfQ+iK2FAf5IHrwESiMHL0fdGtbA1/tw0KZdC8/krZK7DtI+WvY+fnajdvS0MAqhvw==
+"@node-wot/binding-http@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@node-wot/binding-http/-/binding-http-0.9.0.tgz#69298e989a9d67ff135d6bae5ff3714e76f48511"
+  integrity sha512-8TykDYaQvdLTer2+BOzRljCkyDTHo+uvmhABzh1oI5CM5J5KPaAE/Iw5d8UqJFSiYnZPxVGM4/0A3IMj6HtIcA==
   dependencies:
-    "@node-wot/core" "0.8.16"
-    "@types/eventsource" "1.1.10"
+    "@node-wot/core" "0.9.0"
     accept-language-parser "1.5.0"
     basic-auth "2.0.1"
     client-oauth2 "^4.2.5"
     eventsource "^2.0.2"
-    find-my-way "^7.6.2"
+    find-my-way "^8.2.2"
     node-fetch "^2.6.7"
     query-string "^7.1.1"
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.8.16", "@node-wot/core@^0.8.0":
+"@node-wot/core@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.9.0.tgz#727436295833738c7efd5eac5cb8bf8fd1147a03"
+  integrity sha512-aAMTuFJKzT5KZF/sDbhiMGqg6NJjmtTnVn1QkxU48kgPUyqSbW7A0OHTWwlmNLAukdOqkY4a1hWke61DfCFbkw==
+  dependencies:
+    "@petamoriken/float16" "^3.1.1"
+    "@thingweb/thing-model" "^1.0.3"
+    ajv "^8.11.0"
+    ajv-formats "^2.1.1"
+    cbor "^8.1.0"
+    content-type "^1.0.5"
+    debug "^4.3.4"
+    is-absolute-url "3.0.3"
+    rxjs "^5.5.11"
+    uritemplate "0.3.4"
+    url-toolkit "2.1.6"
+    uuid "^7.0.3"
+    web-streams-polyfill "^4.0.0"
+
+"@node-wot/core@^0.8.0":
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.8.16.tgz#6ec7d88175e22e829c28acd37cd276799701b50e"
   integrity sha512-viHaXIeIryx+sm0H8oBnR5mUSTFj9raWaJYCNa/BGphfOUhcOB5pajS5NOJcQUzSy76Z9XY3JMw3taRAuPTvsw==
@@ -460,11 +478,6 @@
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
   integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
-
-"@types/eventsource@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@types/eventsource/-/eventsource-1.1.10.tgz#e085be22c913e893f83f5ace21e9c10f87cbf6d2"
-  integrity sha512-rYzRmJSnm44Xb7FICRXEjwe/26ZiiS+VMGmuD17PevMP56cGgLEsaM955sYQW0S+K7h+mPOL70vGf1hi4WDjVA==
 
 "@types/json-schema@^7.0.15":
   version "7.0.15"
@@ -1563,14 +1576,14 @@ filter-obj@^1.1.0:
   resolved "https://registry.yarnpkg.com/filter-obj/-/filter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
   integrity sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==
 
-find-my-way@^7.6.2:
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/find-my-way/-/find-my-way-7.7.0.tgz#d7b51ca6046782bcddd5a8435e99ad057e5a8876"
-  integrity sha512-+SrHpvQ52Q6W9f3wJoJBbAQULJuNEEQwBvlvYwACDhBTLOTMiQ0HYWh4+vC3OivGP2ENcTI1oKlFA2OepJNjhQ==
+find-my-way@^8.2.2:
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/find-my-way/-/find-my-way-8.2.2.tgz#f3e78bc6ead2da4fdaa201335da3228600ed0285"
+  integrity sha512-Dobi7gcTEq8yszimcfp/R7+owiT4WncAJ7VTTgFH1jYJ5GaG1FbhjwDG820hptN0QDFvzVY3RfCzdInvGPGzjA==
   dependencies:
     fast-deep-equal "^3.1.3"
     fast-querystring "^1.0.0"
-    safe-regex2 "^2.0.0"
+    safe-regex2 "^3.1.0"
 
 find-up@^2.0.0:
   version "2.1.0"
@@ -2825,10 +2838,10 @@ resolve@^1.10.0:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
-ret@~0.2.0:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/ret/-/ret-0.2.2.tgz#b6861782a1f4762dce43402a71eb7a283f44573c"
-  integrity sha512-M0b3YWQs7R3Z917WRQy1HHA7Ba7D8hvZg6UE5mLykJxQVE2ju0IXbGlaHPPlkY+WN7wFP+wUMXmBFA0aV6vYGQ==
+ret@~0.4.0:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/ret/-/ret-0.4.3.tgz#5243fa30e704a2e78a9b9b1e86079e15891aa85c"
+  integrity sha512-0f4Memo5QP7WQyUEAYUO3esD/XjOc3Zjjg5CPsAq1p8sIu0XPeMbHJemKA0BO7tV0X7+A0FoEpbmHXWxPyD3wQ==
 
 reusify@^1.0.4:
   version "1.0.4"
@@ -2857,6 +2870,13 @@ rxjs@5.5.11:
   dependencies:
     symbol-observable "1.0.1"
 
+rxjs@^5.5.11:
+  version "5.5.12"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.12.tgz#6fa61b8a77c3d793dbaf270bee2f43f652d741cc"
+  integrity sha512-xx2itnL5sBbqeeiVgNPVuQQ1nC8Jp2WfNJhXWHmElW9YmrpS9UVnNzhP3EH3HFqexO5Tlp8GhYY+WEcqcVMvGw==
+  dependencies:
+    symbol-observable "1.0.1"
+
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
@@ -2867,12 +2887,12 @@ safe-buffer@^5.2.0, safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
-safe-regex2@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/safe-regex2/-/safe-regex2-2.0.0.tgz#b287524c397c7a2994470367e0185e1916b1f5b9"
-  integrity sha512-PaUSFsUaNNuKwkBijoAPHAK6/eM6VirvyPWlZ7BAQy4D+hCvh4B6lIG+nPdhbFfIbP+gTGBcrdsOaUs0F+ZBOQ==
+safe-regex2@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/safe-regex2/-/safe-regex2-3.1.0.tgz#fd7ec23908e2c730e1ce7359a5b72883a87d2763"
+  integrity sha512-RAAZAGbap2kBfbVhvmnTFv73NWLMvDGOITFYTZBAaY8eR+Ir4ef7Up/e7amo+y1+AH+3PtLkrt9mvcTsG9LXug==
   dependencies:
-    ret "~0.2.0"
+    ret "~0.4.0"
 
 safe-stable-stringify@^2.3.1:
   version "2.5.0"
@@ -3418,6 +3438,11 @@ web-streams-polyfill@^3.0.1:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz#2073b91a2fdb1fbfbd401e7de0ac9f8214cecb4b"
   integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
+
+web-streams-polyfill@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-4.1.0.tgz#3ba095d0eb3ef6377cd126e8354b2cdba286e0d3"
+  integrity sha512-A7Jxrg7+eV+eZR/CIdESDnRGFb6/bcKukGvJBB5snI6cw3is1c2qamkYstC1bY1p08TyMRlN9eTMkxmnKJBPBw==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
