@@ -377,29 +377,10 @@
     rxjs "5.5.11"
     slugify "^1.4.5"
 
-"@node-wot/core@0.9.1":
+"@node-wot/core@0.9.1", "@node-wot/core@^0.9.0":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.9.1.tgz#2029f63d6914037a52bd35d890188186cb7c8130"
   integrity sha512-nj7yQNkVjIwAERsf4i2IMNfHejARHvWWuzbIuNT2S3b9dH3jUdieV2+IzXs7/7trtj2E5BUhRMe6UTmqRMl6uQ==
-  dependencies:
-    "@petamoriken/float16" "^3.1.1"
-    "@thingweb/thing-model" "^1.0.3"
-    ajv "^8.11.0"
-    ajv-formats "^2.1.1"
-    cbor "^8.1.0"
-    content-type "^1.0.5"
-    debug "^4.3.4"
-    is-absolute-url "3.0.3"
-    rxjs "^5.5.11"
-    uritemplate "0.3.4"
-    url-toolkit "2.1.6"
-    uuid "^7.0.3"
-    web-streams-polyfill "^4.0.0"
-
-"@node-wot/core@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@node-wot/core/-/core-0.9.0.tgz#727436295833738c7efd5eac5cb8bf8fd1147a03"
-  integrity sha512-aAMTuFJKzT5KZF/sDbhiMGqg6NJjmtTnVn1QkxU48kgPUyqSbW7A0OHTWwlmNLAukdOqkY4a1hWke61DfCFbkw==
   dependencies:
     "@petamoriken/float16" "^3.1.1"
     "@thingweb/thing-model" "^1.0.3"
