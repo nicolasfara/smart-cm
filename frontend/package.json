@@ -17,7 +17,7 @@
     "antd": "5.27.4",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "web-vitals": "5.1.0"
   },
   "scripts": {
