@@ -15,8 +15,8 @@
   "dependencies": {
     "@ant-design/icons": "6.1.0",
     "antd": "6.0.1",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "typescript": "5.9.3",
     "web-vitals": "5.1.0"
   },
